@@ -10,3 +10,12 @@ numCatLives += 1;
 let gameOver: boolean = false;
 gameOver = true;
 gameOver = "true"; // This will give an error
+
+// Type Inference
+let tvShow = "Olive Kitteridge";
+tvShow = "The Other Two";
+tvShow = false;
+
+let isFunny = false;
+isFunny = true;
+isFunny = "asd";
