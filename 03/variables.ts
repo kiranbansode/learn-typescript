@@ -29,3 +29,13 @@ thing.toUpperCase();
 
 // let thing = "hello";
 // thing.saddasdas();
+
+const movies = ["Arrival", "The Thing", "Aliens", "Amadeus"];
+
+let foundMovie: string;
+
+for (let movie of movies) {
+	if (movie === "Amadeus") {
+		foundMovie = "Amadeus";
+	}
+}
