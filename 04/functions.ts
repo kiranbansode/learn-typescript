@@ -24,9 +24,8 @@ const add = (x: number, y: number): number => {
 	return x + y;
 };
 
-// function random(num: number) {
-// 	if (Math.random() < 0.5) {
-// 		return num.toString();
-// 	}
-// 	return num;
-// }
+const colors = ["red", "orange", "yellow"];
+
+colors.map((color) => {
+	return color.toFixed();
+});
