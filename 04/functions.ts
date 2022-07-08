@@ -3,9 +3,11 @@ function square(num: number) {
 }
 
 function greet(person: string) {
-	person * person;
 	return `Hi there, ${person}`;
 }
 
+const doSomething = (person: string, age: number, isFunny: boolean) => {};
+
 square(3);
-greet(true);
+greet("Tonya Harding");
+doSomething("Chicken", 78, true);
