@@ -84,4 +84,35 @@ const user: User = {
 };
 
 console.log(user.id);
-user.id = 238974;
+// user.id = 238974; // not work TypeScript will yel
+
+type Circle = {
+	radius: number;
+};
+
+type Colorful = {
+	color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+	radius: 4,
+	color: 'yellow',
+};
+
+type Cat = {
+	numLives: number;
+};
+
+type Dog = {
+	breed: string;
+};
+
+type CatDog = Cat & Dog & { age: number };
+
+const christy: CatDog = {
+	numLives: 7,
+	breed: 'Husky',
+	age: 9,
+};
