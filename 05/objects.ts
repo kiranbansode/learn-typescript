@@ -72,3 +72,16 @@ type Point = {
 };
 
 const myPoint: Point = { x: 1, y: 3 };
+
+type User = {
+	readonly id: number;
+	username: string;
+};
+
+const user: User = {
+	id: 12837,
+	username: 'CatGirl',
+};
+
+console.log(user.id);
+user.id = 238974;
