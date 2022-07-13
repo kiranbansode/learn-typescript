@@ -38,3 +38,18 @@ const stuffs: (number | string | boolean)[] = [1, 2, 3, 4, true, 'word'];
 const coords: (Point | Loc)[] = [];
 coords.push({ lat: 321.213, long: 23.334 });
 coords.push({ x: 1, y: 34 });
+
+let zero: 0 = 0;
+let mood: 'Happy' | 'Sad' = 'Happy';
+mood = 'Sad';
+
+type DayOfWeek =
+	| 'Monday'
+	| 'Tuesday'
+	| 'Wednesday'
+	| 'Thursday'
+	| 'Friday'
+	| 'Saturday'
+	| 'Sunday';
+
+let today: DayOfWeek = 'Monday';
