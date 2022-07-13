@@ -14,3 +14,20 @@ type Loc = {
 
 let coordinates: Point | Loc = { x: 1, y: 34 };
 coordinates = { lat: 321.213, long: 23.334 };
+
+function printAge(age: number | string) {
+	console.log(`Your are ${age} years old`);
+}
+
+printAge(23);
+printAge('87');
+
+function calculateTax(price: number | string, tax: number) {
+	if (typeof price === 'string') {
+		price = parseFloat(price.replace('$', ''));
+	}
+	return price * tax;
+}
+
+console.log(calculateTax(45, 0.7));
+console.log(calculateTax('$45', 0.7));
