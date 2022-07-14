@@ -38,3 +38,34 @@ enum ArrowKeys {
 	LEFT = 'left',
 	RIGHT = 'right',
 }
+
+/* --------------------- Code from TypeScript Playground -------------------- */
+
+const enum OrderStatus2 {
+	PENDING,
+	SHIPPED,
+	DELIVERED,
+	RETURNED,
+}
+
+const order = {
+	orderNumber: 209389203,
+	status: OrderStatus2.PENDING,
+};
+
+const order2 = {
+	orderNumber: 209389230,
+	status: OrderStatus2.DELIVERED,
+};
+
+/* -------------------------------- Compiled -------------------------------- */
+
+// "use strict";
+// const order = {
+//     orderNumber: 209389203,
+//     status: 0 /* OrderStatus.PENDING */
+// };
+// const order2 = {
+//     orderNumber: 209389230,
+//     status: 2 /* OrderStatus.DELIVERED */,
+// };
