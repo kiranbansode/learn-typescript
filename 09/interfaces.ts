@@ -33,3 +33,21 @@ const thomas: Person = {
 
 thomas.first = 'Specter';
 // thomas.id = 123; // NOT Allowed
+
+interface Product {
+	name: string;
+	price: number;
+	applyDiscount(discount: number): number;
+}
+
+const shoes: Product = {
+	name: 'Blue Suede Shoes',
+	price: 100,
+	applyDiscount(discount) {
+		const newPrice = this.price * (1 - discount);
+		this.price = newPrice;
+		return this.price;
+	},
+};
+
+console.log(shoes.applyDiscount(0.4));
