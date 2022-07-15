@@ -106,3 +106,5 @@ const pierre: Engineer = {
 	level: 'senior',
 	languages: ['english', 'hindi'],
 };
+
+type Color = 'red' | 'blue';
