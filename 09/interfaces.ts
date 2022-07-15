@@ -17,6 +17,8 @@ interface Person {
 	first: string;
 	last: string;
 	nickname?: string;
+	sayHi: (name: string) => string;
+	// sayHi(name): string;
 }
 
 const thomas: Person = {
@@ -24,6 +26,9 @@ const thomas: Person = {
 	first: 'Thomas',
 	last: 'Hardy',
 	// nickname: 'Hardy',
+	sayHi: (name) => {
+		return 'Hello!';
+	},
 };
 
 thomas.first = 'Specter';
