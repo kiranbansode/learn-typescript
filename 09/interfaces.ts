@@ -70,3 +70,17 @@ const elton: Dog = {
 		return 'Woof Woof!';
 	},
 };
+
+interface ServiceDog extends Dog {
+	job: 'drug sniffer' | 'bomb' | 'guide dog';
+}
+
+const chewy: ServiceDog = {
+	name: 'Chewy',
+	age: 4.5,
+	breed: ' Lab',
+	bark() {
+		return 'Bark';
+	},
+	job: 'guide dog',
+};
