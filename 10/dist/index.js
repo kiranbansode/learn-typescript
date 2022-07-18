@@ -11,3 +11,8 @@ var juniper = {
     name: 'Juniper',
     age: 1,
 };
+// function doThing(thing) {
+// 	console.log(thing);
+// }
+var users = ['user1', 'user2'];
+users = null;
