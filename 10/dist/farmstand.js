@@ -1,4 +1,4 @@
 "use strict";
-const printProductSummery = (product) => {
-    console.log(`${product.name} - $${product.price}`);
+var printProductSummery = function (product) {
+    console.log("".concat(product.name, " - $").concat(product.price));
 };
