@@ -8,7 +8,16 @@ const input = document.getElementById('todo-input')! as HTMLInputElement;
 const form = document.querySelector('form')!;
 const list = document.getElementById('todo-list')!;
 
-const todos: Todo[] = [];
+const todos: Todo[] = readTodos();
+
+todos.forEach(createTodo);
+
+function readTodos(): Todo[] {
+	const todosJSON = localStorage.getItem('todos');
+	if (todosJSON === null) return [];
+
+	return JSON.parse(todosJSON);
+}
 
 const handleSubmit = (event: SubmitEvent) => {
 	event.preventDefault();
@@ -18,6 +27,8 @@ const handleSubmit = (event: SubmitEvent) => {
 	};
 	createTodo(newTodo);
 	todos.push(newTodo);
+
+	localStorage.setItem('todos', JSON.stringify(todos));
 
 	input.value = '';
 	input.focus();
