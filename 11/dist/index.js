@@ -1,4 +1,5 @@
 "use strict";
 var btn = document.getElementById('btn');
-console.log(btn);
-console.log('hello'.replaceAll('l', '!'));
+btn.addEventListener('click', function () {
+    alert('Clicked');
+});
