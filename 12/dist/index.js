@@ -1,10 +1,19 @@
 class Player {
-	score = 0;
+	#score = 0;
 	numLives = 10;
 
 	constructor(first, last) {
 		this.first = first;
 		this.last = last;
+		this.#secret();
+	}
+
+	getScore() {
+		return this.#score;
+	}
+
+	updateScore(newScore) {
+		return (this.#score = newScore);
 	}
 
 	taunt() {
@@ -13,6 +22,10 @@ class Player {
 
 	loseLife() {
 		this.numLives -= 1;
+	}
+
+	#secret() {
+		console.log('Secrete');
 	}
 }
 
@@ -23,6 +36,10 @@ const player1 = new Player('blue', 'steel');
 console.log(player1);
 console.log(player1.loseLife());
 console.log(player1);
+console.log(player1.getScore());
+console.log(player1.updateScore(28));
+console.log(player1.getScore());
+// console.log(player1.#secret);
 
 // const player2 = new Player('charlie', 'brown');
 // player2.taunt();
