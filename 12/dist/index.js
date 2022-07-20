@@ -1,6 +1,6 @@
 class Player {
 	#score = 0;
-	numLives = 10;
+	#numLives = 10;
 
 	constructor(first, last) {
 		this.first = first;
@@ -12,8 +12,21 @@ class Player {
 		return `${this.first} ${this.last}`;
 	}
 
+	set fullName(newName) {
+		const [first, last] = newName.split(' ');
+		this.first = first;
+		this.last = last;
+	}
+
 	get score() {
 		return this.#score;
+	}
+
+	set score(newScore) {
+		if (newScore < 0) {
+			throw new Error('Score must be positive!');
+		}
+		this.#score = newScore;
 	}
 
 	getScore() {
@@ -41,16 +54,26 @@ const player1 = new Player('blue', 'steel');
 // player1.taunt();
 // console.log(player1.first);
 // console.log(player1.last);
-console.log(player1);
-console.log(player1.loseLife());
-console.log(player1);
-console.log(player1.getScore());
-console.log(player1.updateScore(28));
-console.log(player1.getScore());
+// console.log(player1);
+// console.log(player1.loseLife());
+// console.log(player1);
+// console.log(player1.getScore());
+// console.log(player1.updateScore(28));
+// console.log(player1.getScore());
 // console.log(player1.#secret);
 
-console.log(player1.fllName);
-console.log(player1.score);
+// console.log(player1.fllName);
+// console.log(player1.score);
+// player1.score = -12387219;
+// player1.score = 3024;
+// console.log(player1.score);
 // const player2 = new Player('charlie', 'brown');
 // player2.taunt();
 // console.log(player2);
+
+console.log(player1.fullName);
+player1.fullName = 'Any Adams';
+console.log(player1.fllName);
+player1.fullName = 'Kiran Bansode';
+console.log(player1.fllName);
+console.log(player1.first);
