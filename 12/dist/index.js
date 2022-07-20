@@ -1,4 +1,5 @@
 class Player {
+	static description = 'Player In our Game';
 	#score = 0;
 	#numLives = 10;
 
@@ -6,6 +7,10 @@ class Player {
 		this.first = first;
 		this.last = last;
 		this.#secret();
+	}
+
+	static randomPlayer() {
+		return new Player('Andy', 'Sam');
 	}
 
 	get fllName() {
@@ -71,9 +76,11 @@ const player1 = new Player('blue', 'steel');
 // player2.taunt();
 // console.log(player2);
 
-console.log(player1.fullName);
-player1.fullName = 'Any Adams';
-console.log(player1.fllName);
-player1.fullName = 'Kiran Bansode';
-console.log(player1.fllName);
-console.log(player1.first);
+// console.log(player1.fullName);
+// player1.fullName = 'Any Adams';
+// console.log(player1.fllName);
+// player1.fullName = 'Kiran Bansode';
+// console.log(player1.fllName);
+// console.log(player1.first);
+
+console.log(player1);
