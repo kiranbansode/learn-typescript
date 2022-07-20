@@ -8,6 +8,14 @@ class Player {
 		this.#secret();
 	}
 
+	get fllName() {
+		return `${this.first} ${this.last}`;
+	}
+
+	get score() {
+		return this.#score;
+	}
+
 	getScore() {
 		return this.#score;
 	}
@@ -41,6 +49,8 @@ console.log(player1.updateScore(28));
 console.log(player1.getScore());
 // console.log(player1.#secret);
 
+console.log(player1.fllName);
+console.log(player1.score);
 // const player2 = new Player('charlie', 'brown');
 // player2.taunt();
 // console.log(player2);
