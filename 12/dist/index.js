@@ -55,7 +55,15 @@ class Player {
 	}
 }
 
-const player1 = new Player('blue', 'steel');
+class AdminPlayer extends Player {
+	isAdmin = true;
+}
+
+const admin = new AdminPlayer();
+console.log(admin);
+// const player1 = new Player('blue', 'steel');
+// console.log(player1);
+
 // player1.taunt();
 // console.log(player1.first);
 // console.log(player1.last);
@@ -82,5 +90,3 @@ const player1 = new Player('blue', 'steel');
 // player1.fullName = 'Kiran Bansode';
 // console.log(player1.fllName);
 // console.log(player1.first);
-
-console.log(player1);
