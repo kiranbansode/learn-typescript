@@ -58,3 +58,27 @@ console.log(elton.fullName);
 elton.fullName;
 elton.score = 99;
 console.log(elton.score);
+
+interface Colorful {
+	color: string;
+}
+
+interface Printable {
+	print(): void;
+}
+
+class Bike implements Colorful {
+	constructor(public color: string) {}
+}
+
+class Jacket implements Colorful, Printable {
+	constructor(public brand: string, public color: string) {}
+
+	print(): void {
+		console.log(`${this.color} ${this.brand}`);
+	}
+}
+
+const bike1 = new Bike('red');
+
+const jacket1 = new Jacket('Brady', 'Black');

@@ -51,3 +51,19 @@ console.log(elton.fullName);
 elton.fullName;
 elton.score = 99;
 console.log(elton.score);
+class Bike {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Jacket {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+    print() {
+        console.log(`${this.color} ${this.brand}`);
+    }
+}
+const bike1 = new Bike('red');
+const jacket1 = new Jacket('Brady', 'Black');
