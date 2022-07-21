@@ -22,12 +22,32 @@ class Player {
 	constructor(
 		public first: string,
 		public last: string,
-		private score: number
+		private _score: number
 	) {}
 
 	private secretMethod(): void {
 		console.log('Secret Method');
 	}
+
+	get fullName(): string {
+		return `${this.first} ${this.last}`;
+	}
+
+	get score(): number {
+		return this._score;
+	}
+
+	set score(newScore: number) {
+		if (newScore <= 0) {
+			throw new Error('Score cannot be negative');
+		}
+
+		this._score = newScore;
+	}
 }
 
 const elton = new Player('Elton', 'Steele', 100);
+console.log(elton.fullName);
+elton.fullName;
+elton.score = 99;
+console.log(elton.score);
