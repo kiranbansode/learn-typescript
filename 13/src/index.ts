@@ -82,3 +82,43 @@ class Jacket implements Colorful, Printable {
 const bike1 = new Bike('red');
 
 const jacket1 = new Jacket('Brady', 'Black');
+
+abstract class Employee {
+	constructor(public fist: string, public last: string) {}
+
+	abstract getPay(): number;
+
+	greet() {
+		console.log('HELLO!');
+	}
+}
+
+class FullTimeEmployee extends Employee {
+	constructor(first: string, last: string, private salary: number) {
+		super(first, last);
+	}
+	getPay() {
+		return this.salary;
+	}
+}
+
+class PartTimeEmployee extends Employee {
+	constructor(
+		first: string,
+		last: string,
+		private hourlyRate: number,
+		private hoursWorked: number
+	) {
+		super(first, last);
+	}
+
+	getPay(): number {
+		return this.hourlyRate * this.hoursWorked;
+	}
+}
+
+const betty = new FullTimeEmployee('Betty', 'white', 95000);
+console.log(betty.getPay());
+
+const bill = new PartTimeEmployee('Bill', 'Bison', 24, 1100);
+console.log(bill.getPay());
