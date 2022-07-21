@@ -7,4 +7,5 @@ class Player {
     }
 }
 const elton = new Player('Elton', 'Steele');
-elton.score = 42;
+// elton.score = 42;
+elton.first = 'Kiran';
