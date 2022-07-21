@@ -1,7 +1,7 @@
 class Player {
-	readonly first: string;
-	readonly last: string;
-	score = 0;
+	public readonly first: string;
+	public readonly last: string;
+	public score = 0;
 
 	constructor(first: string, last: string) {
 		this.first = first;
@@ -11,4 +11,4 @@ class Player {
 
 const elton = new Player('Elton', 'Steele');
 // elton.score = 42;
-elton.first = 'Kiran';
+// elton.first = 'Kiran';
