@@ -22,7 +22,7 @@ class Player {
 	constructor(
 		public first: string,
 		public last: string,
-		private _score: number
+		protected _score: number
 	) {}
 
 	private secretMethod(): void {
@@ -43,6 +43,13 @@ class Player {
 		}
 
 		this._score = newScore;
+	}
+}
+
+class SuperPlayer extends Player {
+	public isAdmin: boolean = true;
+	maxScore() {
+		this._score = 99999999;
 	}
 }
 
