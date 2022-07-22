@@ -61,3 +61,14 @@ function makeEmptyArray() {
 }
 var nums = makeEmptyArray();
 var bool = makeEmptyArray();
+var Playlist = /** @class */ (function () {
+    function Playlist() {
+        this.queue = [];
+    }
+    Playlist.prototype.add = function (el) {
+        this.queue.push(el);
+    };
+    return Playlist;
+}());
+var songs = new Playlist();
+var videos = new Playlist();
