@@ -51,3 +51,17 @@ getRandomElement([1, 2, 3, 4, 5]);
 // [4,5,6,7]
 // [true, false, true]
 // [{},{},{}]
+
+function merge<T, U>(object: T, object2: U) {
+	return {
+		...object,
+		...object2,
+	};
+}
+
+const comboObj = merge({ name: 'Colt' }, { pets: ['blue', 'elton'] });
+
+// merge<{ name: string }, { pets: string[] }>(
+// 	{ name: 'Colt' },
+// 	{ pets: ['blue', 'elton'] }
+// );
