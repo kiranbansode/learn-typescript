@@ -55,3 +55,9 @@ function printDOubleLength(thing) {
     return thing.length * 2;
 }
 printDOubleLength('abc');
+printDOubleLength(234);
+function makeEmptyArray() {
+    return [];
+}
+var nums = makeEmptyArray();
+var bool = makeEmptyArray();

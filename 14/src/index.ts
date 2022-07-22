@@ -80,3 +80,11 @@ function printDOubleLength(thing: Length): number {
 }
 
 printDOubleLength('abc');
+printDOubleLength(234);
+
+function makeEmptyArray<T = number>(): T[] {
+	return [];
+}
+
+const nums = makeEmptyArray();
+const bool = makeEmptyArray<boolean>();
