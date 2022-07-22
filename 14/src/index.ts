@@ -52,7 +52,7 @@ getRandomElement([1, 2, 3, 4, 5]);
 // [true, false, true]
 // [{},{},{}]
 
-function merge<T, U>(object: T, object2: U) {
+function merge<T extends object, U extends object>(object: T, object2: U) {
 	return {
 		...object,
 		...object2,
@@ -60,8 +60,23 @@ function merge<T, U>(object: T, object2: U) {
 }
 
 const comboObj = merge({ name: 'Colt' }, { pets: ['blue', 'elton'] });
+console.log(merge({ name: 'Colt' }, { num: 9 }));
 
 // merge<{ name: string }, { pets: string[] }>(
 // 	{ name: 'Colt' },
 // 	{ pets: ['blue', 'elton'] }
 // );
+
+interface Length {
+	length: number;
+}
+
+// function printDOubleLength<T extends Length>(thing: T): number {
+// 	return thing.length * 2;
+// }
+
+function printDOubleLength(thing: Length): number {
+	return thing.length * 2;
+}
+
+printDOubleLength('abc');

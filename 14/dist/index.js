@@ -47,7 +47,11 @@ function merge(object, object2) {
     return __assign(__assign({}, object), object2);
 }
 var comboObj = merge({ name: 'Colt' }, { pets: ['blue', 'elton'] });
-// merge<{ name: string }, { pets: string[] }>(
-// 	{ name: 'Colt' },
-// 	{ pets: ['blue', 'elton'] }
-// );
+console.log(merge({ name: 'Colt' }, { num: 9 }));
+// function printDOubleLength<T extends Length>(thing: T): number {
+// 	return thing.length * 2;
+// }
+function printDOubleLength(thing) {
+    return thing.length * 2;
+}
+printDOubleLength('abc');
