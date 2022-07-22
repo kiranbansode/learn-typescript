@@ -6,7 +6,7 @@
 // console.log(inputEl);
 // inputEl.value = 'Hacked!';
 
-// const btn = document.querySelector<HTMLButtonElement>('.btn')!;
+const btn = document.querySelector<HTMLButtonElement>('.btn')!;
 
 function numberIdentity(item: number): number {
 	return item;
@@ -44,3 +44,10 @@ function getRandomElement<T>(list: T[]): T {
 
 console.log(getRandomElement<string>(['a', 'b', 'c']));
 console.log(getRandomElement<number>([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+getRandomElement(['a', 'v', 'asd']);
+getRandomElement([1, 2, 3, 4, 5]);
+
+// [4,5,6,7]
+// [true, false, true]
+// [{},{},{}]
